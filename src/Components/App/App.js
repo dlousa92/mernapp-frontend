@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 import HeroCard from './HeroCard/Hero-Card'
 import Home from './Home/Home'
+import New from './New/New'
 import './App.css'
 
 class App extends Component {
