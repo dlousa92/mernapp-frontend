@@ -6,6 +6,8 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom'
+import HeroCard from './HeroCard/Hero-Card'
+import Home from './Home/Home'
 import './App.css'
 
 class App extends Component {
