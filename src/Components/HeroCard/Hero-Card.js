@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 class HeroCard extends Component {
   render () {
     return (
-      <div />
+      <div>
+        <h1>Sup</h1>
+      </div>
     )
   }
 }
