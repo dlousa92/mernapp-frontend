@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
 import {
-  BrowserRouter as Router,
   Link,
-  Route,
-  Redirect,
-  Switch
+  Route
 } from 'react-router-dom'
-import HeroCard from './HeroCard/Hero-Card'
-import Home from './Home/Home'
-import New from './New/New'
+import Home from '../Home/Home'
+import New from '../New/New'
 import './App.css'
 
 class App extends Component {
@@ -17,10 +13,20 @@ class App extends Component {
       <div className='App'>
         <header className='App-header'>
           <h1 className='App-title'>The Ultimate Battle of Ultimate Destiny</h1>
+          <nav>
+            <Link to='/'>Home</Link>
+            <Link to='/new'>Create a Hero</Link>
+          </nav>
         </header>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main>
+          <Route path='/'
+            component={Home}
+            exact
+          />
+          <Route path='/new'
+            component={New}
+          />
+        </main>
       </div>
     )
   }
