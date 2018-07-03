@@ -33,12 +33,12 @@ class New extends Component {
       name: this.state.name,
       superPower: this.state.superPower
     })
-      .then(function (res) {
+      .then((res) => {
+        this.props.history.push('/')
       })
   }
   onClick (e) {
     this.createHero(e)
-    this.props.history.push('/')
   }
   setName (e) {
     this.setState({
