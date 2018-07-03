@@ -19,12 +19,16 @@ class App extends Component {
           </nav>
         </header>
         <main>
+          <Route path='/new'
+            render={(routerParams) =>
+              <New
+                {...routerParams}
+                {...this.state}
+              />}
+          />
           <Route path='/'
             component={Home}
             exact
-          />
-          <Route path='/new'
-            component={New}
           />
         </main>
       </div>
