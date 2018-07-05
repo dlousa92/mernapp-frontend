@@ -12,7 +12,13 @@ class HeroCard extends Component {
 
   componentDidMount () {
     console.log('here')
-    axios.get('http://localhost:8000/api/heroes')
+    let origin
+    if (window.location.origin === 'http://localhost8000') {
+      origin = 'http://localhost8000'
+    } else {
+      origin = 'https://mernapp-api.herokuapp.com/'
+    }
+    axios.get(`${origin}/api/heroes`)
       .then((res) => {
         // console.log(res)
         this.setState({

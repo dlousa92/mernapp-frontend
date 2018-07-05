@@ -28,8 +28,14 @@ class New extends Component {
   }
   createHero (e) {
     e.preventDefault()
+    let origin
+    if (window.location.origin === 'http://localhost/8000') {
+      origin = 'http://localhost/8000'
+    } else {
+      origin = 'https://mernapp-api.herokuapp.com/'
+    }
 
-    axios.post('http://localhost:8000/api/heroes', {
+    axios.post(`${origin}/api/heroes`, {
       name: this.state.name,
       superPower: this.state.superPower
     })
