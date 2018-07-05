@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className='App'>
         <header className='App-header'>
-          <h1 className='App-title'>The Ultimate Battle of Ultimate Destiny</h1>
+          <h1 className='App-title'>The Ultimate Showdown of Ultimate Destiny</h1>
           <nav>
             <Link to='/'>Home</Link>
             <Link to='/new'>Create a Hero</Link>
